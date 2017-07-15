@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--Structure for the DateTime from the Controller wallclock accessed by the GSV/SSV instruction-->
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="24.00" TargetName="DateTime_Type" TargetType="DataType" ContainsContext="true" Owner="Windows User" ExportDate="Tue Apr 25 20:04:34 2017" ExportOptions="References DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="MixRoomClean">
+<DataTypes Use="Context">
+<DataType Use="Target" Name="DateTime_Type" Family="NoFamily" Class="User">
+<Description>
+<![CDATA[Structure for the DateTime from the Controller wallclock accessed by the GSV/SSV instruction]]>
+</Description>
+<Members>
+<Member Name="Year" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Month" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[The month (1 - 12)]]>
+</Description>
+</Member>
+<Member Name="Day" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[The day (1 - 31)]]>
+</Description>
+</Member>
+<Member Name="Hour" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[hour (0 - 23)]]>
+</Description>
+</Member>
+<Member Name="Minute" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[minute (0 - 59)]]>
+</Description>
+</Member>
+<Member Name="Second" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[second (0 - 59)]]>
+</Description>
+</Member>
+<Member Name="Microseconds" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(0 - 999,999)]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+</DataTypes>
+</Controller>
+</RSLogix5000Content>

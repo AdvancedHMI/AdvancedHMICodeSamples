@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="24.00" TargetName="RawMaterial" TargetType="DataType" ContainsContext="true" Owner="Windows User" ExportDate="Tue Apr 25 20:05:18 2017" ExportOptions="References DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="MixRoomClean">
+<DataTypes Use="Context">
+<DataType Name="DateTime_Type" Family="NoFamily" Class="User">
+<Description>
+<![CDATA[Structure for the DateTime from the Controller wallclock accessed by the GSV/SSV instruction]]>
+</Description>
+<Members>
+<Member Name="Year" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Month" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[The month (1 - 12)]]>
+</Description>
+</Member>
+<Member Name="Day" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[The day (1 - 31)]]>
+</Description>
+</Member>
+<Member Name="Hour" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[hour (0 - 23)]]>
+</Description>
+</Member>
+<Member Name="Minute" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[minute (0 - 59)]]>
+</Description>
+</Member>
+<Member Name="Second" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[second (0 - 59)]]>
+</Description>
+</Member>
+<Member Name="Microseconds" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[(0 - 999,999)]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+<DataType Use="Target" Name="RawMaterial" Family="NoFamily" Class="User">
+<Members>
+<Member Name="RawMaterialID" DataType="STRING" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Location" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="TargetWeight" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="Tolerance" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="ZZZZZZZZZZRawMateria4" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="Optional" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZRawMateria4" BitNumber="0" ExternalAccess="Read/Write"/>
+<Member Name="ActualWeight" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="LotInformation" DataType="LotInformation" Dimension="2" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="TimeStarted" DataType="DateTime_Type" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="TimeCompleted" DataType="DateTime_Type" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="HandStationUsed" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+<Dependencies>
+<Dependency Type="DataType" Name="LotInformation"/>
+<Dependency Type="DataType" Name="DateTime_Type"/>
+<Dependency Type="DataType" Name="DateTime_Type"/>
+</Dependencies>
+</DataType>
+<DataType Name="LotInformation" Family="NoFamily" Class="User">
+<Members>
+<Member Name="LotNumber" DataType="STRING" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="ExpirationDate" DataType="STRING" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write"/>
+<Member Name="ActualWeight" DataType="REAL" Dimension="0" Radix="Float" Hidden="false" ExternalAccess="Read/Write"/>
+</Members>
+</DataType>
+</DataTypes>
+</Controller>
+</RSLogix5000Content>
